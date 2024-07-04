@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.HistoryFragment">
+
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/yeonsung_regular"
+            android:text="Recent Buy"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="350dp"
+            android:layout_height="84dp"
+            android:layout_marginHorizontal="15dp"
+            android:elevation="6dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="38dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView17">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/recent_buy_item"
+                android:layout_width="match_parent"
+                android:layout_height="82dp">
+
+                <TextView
+                    android:id="@+id/buyAgainFoodName"
+                    android:layout_width="121dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/yeonsung_regular"
+                    android:maxLines="2"
+                    android:paddingStart="4dp"
+                    android:text="Pancake"
+                    android:textColor="@color/textcolor"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toEndOf="@+id/buyAgainFoodImage"
+                    app:layout_constraintTop_toTopOf="@+id/buyAgainFoodImage" />
+
+                <TextView
+                    android:id="@+id/subtile"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yeonsung_regular"
+                    android:paddingStart="4dp"
+                    android:text="Waroenk kita"
+                    android:textColor="@color/grey_font"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="@id/buyAgainFoodName"
+                    app:layout_constraintTop_toBottomOf="@id/buyAgainFoodName" />
+
+                <ImageView
+                    android:id="@+id/buyAgainFoodImage"
+                    android:layout_width="64dp"
+                    android:layout_height="62dp"
+                    android:layout_marginStart="15dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+
+                <TextView
+                    android:id="@+id/buyAgainFoodPrice"
+                    android:layout_width="27dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="30dp"
+                    android:gravity="center"
+                    android:text="$5"
+                    android:textColor="@color/textcolor"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/buyAgainFoodImage"
+                    app:layout_constraintStart_toStartOf="@+id/subtile"
+                    app:layout_constraintTop_toBottomOf="@id/subtile" />
+
+                <TextView
+                    android:id="@+id/order_status"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="62dp"
+                    android:background="@color/grey_font"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/received_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/green_rectangle"
+                    android:fontFamily="@font/yeonsung_regular"
+                    android:gravity="center"
+                    android:text="Received"
+                    android:visibility="invisible"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/order_status"
+                    app:layout_constraintStart_toStartOf="@+id/order_status"
+                    app:layout_constraintTop_toBottomOf="@+id/order_status" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:fontFamily="@font/yeonsung_regular"
+            android:text="Previously Buy"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/textView17"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/buyAgain_RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="38dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        tools:listitem="@layout/buy_again_item"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

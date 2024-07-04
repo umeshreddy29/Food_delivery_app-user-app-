@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <ImageView
+        android:id="@+id/buttonBack"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="26dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_button" />
+
+    <TextView
+        android:id="@+id/detail_food_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/yeonsung_regular"
+        android:text="Food Name"
+        android:textColor="@color/textcolor"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonBack" />
+
+    <Button
+        android:id="@+id/add_to_cart_button"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/textcolor"
+        android:elevation="10dp"
+        android:fontFamily="@font/yeonsung_regular"
+        android:gravity="center"
+        android:text=" Add to Cart "
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/detail_food_ingredients"
+        app:layout_constraintStart_toStartOf="@+id/detail_food_ingredients"
+        app:layout_constraintTop_toBottomOf="@+id/detail_food_ingredients" />
+
+    <ImageView
+        android:id="@+id/detail_food_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/detail_food_name"
+        app:layout_constraintStart_toStartOf="@+id/detail_food_name"
+        app:layout_constraintTop_toBottomOf="@+id/detail_food_name"
+        app:srcCompat="@drawable/food_image" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/yeonsung_regular"
+        android:text=" Short Description :- "
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/buttonBack"
+        app:layout_constraintTop_toBottomOf="@+id/detail_food_image" />
+
+    <TextView
+        android:id="@+id/detail_food_desc"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/lato_regular"
+        android:padding="10dp"
+        android:text="  Short description of the item "
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/yeonsung_regular"
+        android:text=" Ingridents :- "
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/detail_food_desc"
+        app:layout_constraintTop_toBottomOf="@+id/detail_food_desc" />
+
+    <TextView
+        android:id="@+id/detail_food_ingredients"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:fontFamily="@font/lato_regular"
+        android:text=" Ingredients used to make the item "
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView22"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
